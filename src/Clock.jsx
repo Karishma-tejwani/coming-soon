@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import './style.css';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 const Clock = () => {
   const [day, setDay] = useState(new Date());
@@ -11,10 +13,14 @@ const Clock = () => {
     return () => clearInterval(interval);
   }, []);
 
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
+
   return (
     <>
-      <h1>Coming Soon</h1>
-      <p className="subtitle">
+      <h1 data-aos="zoom-in-down">Coming Soon</h1>
+      <p className="subtitle" data-aos="zoom-in-up">
         Stay Tuned For <br />
         Something Amazing!
       </p>
