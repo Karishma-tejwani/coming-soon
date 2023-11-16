@@ -8,7 +8,7 @@
 
 h1 {
   font-family: 'Agbalumo';
-  color: rgb(177, 177, 171);
+  color: rgb(213, 213, 211);
   text-align: center;
   font-size: 40px;
   position: absolute;
@@ -19,7 +19,7 @@ h1 {
 }
 .subtitle {
   font-family: 'Agbalumo';
-  color: rgb(163, 163, 159);
+  color: rgb(188, 188, 186);
   text-align: center;
   font-size: 20px;
   position: absolute;
@@ -131,22 +131,16 @@ body {
 .clock:before {
   content: '';
   position: absolute;
-  width: 18px;
-  height: 18px;
-  /* background: #13a1d8; */
+  width: 7px;
+  height: 7px;
+  background: #fff;
   border-radius: 50%;
   z-index: 10000;
-  /* border: #13a1d8 2px; */
+  border: #fff 2px;
 }
-.clock .hour,
 .clock .min,
 .clock .sec {
   position: absolute;
-}
-.clock .hour,
-.hr {
-  width: 160px;
-  height: 160px;
 }
 
 .clock .min,
@@ -159,23 +153,12 @@ body {
   width: 230px;
   height: 230px;
 }
-.hr,
 .mn,
 .sc {
   display: flex;
   justify-content: center;
   position: absolute;
   border-radius: 50%;
-}
-.hr:before {
-  content: '';
-
-  position: absolute;
-  width: 8px;
-  height: 80px;
-  background: #292a2e;
-  z-index: 10;
-  border-radius: 6px 6px 0 0;
 }
 .mn:before {
   content: '';

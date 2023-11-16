@@ -25,17 +25,6 @@ const Clock = () => {
         Something Amazing!
       </p>
       <div className="clock">
-        <div className="hour">
-          <HourHand
-            rotation={
-              ((day.getHours() % 12) +
-                day.getMinutes() / 60 +
-                day.getSeconds() / 3600) *
-                30 +
-              'deg'
-            }
-          />
-        </div>
         <div className="min">
           <MinuteHand rotation={day.getMinutes() * 6 + 'deg'} />
         </div>
@@ -43,40 +32,40 @@ const Clock = () => {
           <SecondHand rotation={day.getSeconds() * 6 + 'deg'} />
         </div>
         <div className="number number1">
-          <p>1</p>
+          <p>|</p>
         </div>
         <div className="number number2">
-          <p>2</p>
+          <p>II</p>
         </div>
         <div className="number number3">
-          <p>3</p>
+          <p>III</p>
         </div>
         <div className="number number4">
-          <p>4</p>
+          <p>IV</p>
         </div>
         <div className="number number5">
-          <p>5</p>
+          <p>V</p>
         </div>
         <div className="number number6">
-          <p>6</p>
+          <p>VI</p>
         </div>
         <div className="number number7">
-          <p>7</p>
+          <p>VII</p>
         </div>
         <div className="number number8">
-          <p>8</p>
+          <p>VIII</p>
         </div>
         <div className="number number9">
-          <p>9</p>
+          <p>IX</p>
         </div>
         <div className="number number10">
-          <p>10</p>
+          <p>X</p>
         </div>
         <div className="number number11">
-          <p>11</p>
+          <p>XI</p>
         </div>
         <div className="number number12">
-          <p>12</p>
+          <p>XII</p>
         </div>
       </div>
     </>
@@ -115,22 +104,6 @@ background: #fff;
 z-index: 11; /*place it above the "clock" and hour gage but under the centerDot*/
 border-radius: 6px 6px 0 0; /*smoothing out end of hour gage*/
 left: 50%;
-transform: rotate(${(props) => props.rotation});
-translate3d(-50%, 0, 0);
-transform-origin: 0px bottom;
-}
-`;
-
-const HourHand = styled.div`
-&:before{
-content: "";
-position: absolute;
-width: 5px;
-height: 80px;
-// background: #292a2e;
-left: 50%;
-z-index: 10; /*place it above the "clock" but under the centerDot*/
-border-radius: 6px 6px 0 0; /*smoothing out end of hour gage*/
 transform: rotate(${(props) => props.rotation});
 translate3d(-50%, 0, 0);
 transform-origin: 0px bottom;
